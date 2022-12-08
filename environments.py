@@ -38,7 +38,7 @@ class ThermostatEnvironment:
             self.temperature,
             abs(self.baseline_temperature - self.temperature),
             self.consumed_electricity,
-            self.price, 2,
+            self.price,
             self.money_spent,
             self.budget - self.money_spent,
             self.days_to_survive - self.days_survived
