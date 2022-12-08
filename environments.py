@@ -93,7 +93,7 @@ class ThermostatEnvironment:
         return self.consumption_at_baseline_temperature * math.pow(0.95, self.baseline_temperature - self.temperature)
 
     def generate_new_price(self) -> float:
-        new_price = np.random.normal(self.price_mu, self.price_mu, 1)[0]
+        new_price = np.random.normal(self.price_mu, self.price_sigma, 1)[0]
 
         if new_price < 0:
             return 0.01
